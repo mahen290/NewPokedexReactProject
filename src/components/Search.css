@@ -1,8 +1,9 @@
 .search-wrapper 
     {
-        width: 50%;
+        width: 60%;
         height: 5rem;
         margin: 2.5rem auto;
+        background-color: rgb(187, 218, 210);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -10,11 +11,11 @@
 
 #pokemon-name-search 
     {
-        width: 100%;
+        width: 96%;
         height: 4rem;
-        margin: 0.6rem auto;
+        margin: 0.5rem auto;
         padding: 1rem;
-        background-color: rgb(223, 194, 158);
+        background-color: rgb(224, 211, 195);
         border: none;
         border-radius: 18px;
         font-size: 20px;

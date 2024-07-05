@@ -1,15 +1,43 @@
+.main-wrapper
+    {
+        width: 99%;
+        margin: 10px;
+        padding: 1rem;
+        border: 2px solid black;
+        background: linear-gradient(rgb(248, 122, 122), rgb(115, 172, 229), rgb(248, 248, 134), rgb(250, 77, 77));
+    }
 .pokemon-list-wrapper 
     {
-        width: 35%;
+        width: 38%;
         height: 5rem;
-        margin: 2rem auto;
-        padding: 16px 0px;
+        margin: 1rem auto;
+        padding: 18px 0px;
         background: linear-gradient( rgb(173, 116, 213), indigo);
-        font-size: 44px;
+        font-size: 38px;
         font-style: normal;
         font-weight: bolder;
         color: yellow;
         text-shadow: 2px 2px 2px black;
         text-align: center;
         border-radius: 15px;
+    }
+.pokemon-wrapper 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+.controls
+    {
+        margin-top: 15rem;
+        text-align: center; 
+    }
+.btn-controls
+    {
+        width: 100px;
+        height: 60px;
+        margin: 16px;
+        border: none;
+        border-radius: 10px;
     }
