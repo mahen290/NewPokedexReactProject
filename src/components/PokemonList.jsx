@@ -59,13 +59,13 @@ function PokemonList()
         <div className = "pokemon-wrapper">
         {
             isLoading ? 'Loading...' : pokemonList.map ( ( poke ) => 
-            <Pokemon key = { poke.id } name = { poke.name } image = { poke.img } /> )
+        <Pokemon key = { poke.id } name = { poke.name } image = { poke.img } rule = { poke.rule }/> )
         }
         </div>
         
         <div className = "controls">
-            <button className = "btn-controls"> Previous </button>
-            <button className = "btn-controls"> Go On Next </button>
+            <button className = "btn-controls"> Go To Previous Page </button>
+            <button className = "btn-controls"> Go On Next Page </button>
         </div>
     </div>
   );

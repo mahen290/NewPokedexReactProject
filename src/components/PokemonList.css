@@ -1,9 +1,9 @@
 .main-wrapper
     {
         width: 99%;
-        margin: 10px;
-        padding: 1rem;
-        border: 2px solid black;
+        margin: 6px;
+        padding: 0.5rem;
+        border: 1px solid black;
         background: linear-gradient(rgb(248, 122, 122), rgb(115, 172, 229), rgb(248, 248, 134), rgb(250, 77, 77));
     }
 .pokemon-list-wrapper 
@@ -11,6 +11,7 @@
         width: 38%;
         height: 5rem;
         margin: 1rem auto;
+        margin-bottom: 4rem;
         padding: 18px 0px;
         background: linear-gradient( rgb(173, 116, 213), indigo);
         font-size: 38px;
@@ -30,14 +31,23 @@
 
 .controls
     {
-        margin-top: 15rem;
+        margin-top: 4rem;
         text-align: center; 
     }
 .btn-controls
     {
-        width: 100px;
+        width: 270px;
         height: 60px;
         margin: 16px;
+        padding: 10px;
+        background: linear-gradient( rgb(173, 116, 213), indigo);
         border: none;
-        border-radius: 10px;
+        border-radius: 11px;
+        font-size: 23px;
+        font-weight: bolder;
     }
+    .btn-controls:hover
+        {
+            color: yellow;
+            text-shadow: 2px 2px 1px black;
+        }

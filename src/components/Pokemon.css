@@ -2,22 +2,16 @@
     {
         margin-top: 1rem;
         flex-basis: 20%;
-        height: 300px;
-        width: 300px;
+        height: 500px;
+        width: 600px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        background-color: yellow;
-    }
-    .pokemon:hover 
-    {
-        background-color: bisque;
-        cursor: pointer;
     }
 .pokemon-name
     {
-        font-size: 25px;
+        font-size: 29px;
         color: red;
         font-weight: bolder;
         text-shadow: 1px 1px 1px black;
@@ -25,7 +19,10 @@
     }
 .pokemon-img
     {
-        margin-top: 0.5rem;
-        height: 1vw; 
-        max-height: 10%;
+        margin-top: 1.25rem;
+    }
+    .pokemon-img:hover 
+    {
+        background-color: rgb(252, 168, 66);
+        cursor: pointer;
     }

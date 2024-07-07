@@ -3,7 +3,7 @@
         width: 60%;
         height: 5rem;
         margin: 2.5rem auto;
-        background-color: rgb(187, 218, 210);
+        background-color: rgb(123, 220, 245);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -11,13 +11,13 @@
 
 #pokemon-name-search 
     {
-        width: 96%;
+        width: 98%;
         height: 4rem;
         margin: 0.5rem auto;
         padding: 1rem;
-        background-color: rgb(224, 211, 195);
+        background-color: whitesmoke;
         border: none;
-        border-radius: 18px;
+        border-radius: 15px;
         font-size: 20px;
         color: blue;
     }
