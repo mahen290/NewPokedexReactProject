@@ -4,6 +4,8 @@ import "./PokemonList.css";
 import axios from 'axios';
 import Pokemon from './Pokemon';
 
+
+
 function PokemonList() 
 {
     const [ pokemonList, setPokemonList ] = useState( [] );
@@ -72,8 +74,8 @@ function PokemonList()
 
         <div className = "pokemon-wrapper">
             {
-                isLoading ? 'Loading...' : pokemonList.map ( ( poke ) => 
-                <Pokemon key = { poke.id } name = { poke.name } image = { poke.img } /> )
+                (isLoading) ? 'Loading...' : pokemonList.map ( ( poke ) => 
+                <Pokemon key = { poke.id } name = { poke.name } image = { poke.img } id = { poke.id } /> )
             }
         </div>
 

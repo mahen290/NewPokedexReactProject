@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
-import Pokedex from "./components/Pokedex";
+import { Link } from "react-router-dom";
+import CustomRoutes from "./CustomRoutes";
 
 function App() {
   return (
     <div>
-        <h1> My Pokedex Project With Vite React </h1>
-        <Pokedex />
+        <h1> 
+          <Link className = "Pokedex-Heading" to = "/"> My Pokedex Project With Vite React </Link> 
+        </h1>
+        <CustomRoutes />
     </div>
   );
 }
