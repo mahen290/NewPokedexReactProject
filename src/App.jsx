@@ -5,11 +5,11 @@ import CustomRoutes from "./CustomRoutes";
 
 function App() {
   return (
-    <div>
-        <h1> 
-          <Link className = "Pokedex-Heading" to = "/"> My Pokedex Project With Vite React </Link> 
-        </h1>
-        <CustomRoutes />
+    <div className = "outer-pokedex">
+      <h1> 
+        <Link className = "Pokedex-Heading" to = "/"> My Pokedex Project With Vite React </Link> 
+      </h1>
+      <CustomRoutes />
     </div>
   );
 }
