@@ -1,8 +1,11 @@
 import React from 'react';
 
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import './PokemonDetails.css';
+
+import { useParams } from 'react-router-dom';
+
 
 function PokemonDetails() {
 
@@ -19,7 +22,7 @@ function PokemonDetails() {
         image: response.data.sprites.other.dream_world.front_default,
         weight: response.data.weight,
         height: response.data.height,
-        types: response.data.types.map( ( type ) => type.type.name)
+        types: response.data.types.map((types) => types.type.name)
       })
 
     }
@@ -32,20 +35,22 @@ function PokemonDetails() {
 
 
   return (
-      <div className = "pokemon-details-wrapper">
+  <div className = "pokemon-details-wrapper">
 
-        <div className = "pokemon-detail-name"> name: { pokemon.name } </div>
-        <img className = "pokemon-detail-image" src = { pokemon.image } alt = "pokemon image" />
+    <img className = "pokemon-detail-image" src = { pokemon.image } />
+    <div className = 'pokemon-detail-name'> <span> { pokemon.name } </span> </div>
+    <div className = 'pokemon-detail-name'> Height: { pokemon.height } </div>
+    <div className = 'pokemon-detail-name'> Weight: { pokemon.weight } </div>
 
-        <div> Height : { pokemon.height } </div>
-        <div> Weight : { pokemon.weight } </div>
+    <div className = "pokemon-detail-types" >
+      { 
+        pokemon.types && pokemon.types.map( ( type ) => <div key = { type }> 
+        { type } </div> ) 
+      }
+    </div>
 
-        <div className = "pokemon-detail-types" >
-            { pokemon.types && pokemon.types.map( ( type ) => <div key = { type }> { type } </div> ) }
-        </div>
-
-      </div>
-    );
-  }
+  </div>
+  );
+}
 
 export default PokemonDetails;
