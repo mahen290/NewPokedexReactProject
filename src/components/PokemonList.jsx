@@ -110,7 +110,7 @@ function PokemonList()
                     pokemonListState.pokemonList.map( (poke) => 
                     <Pokemon 
                         name = { poke.name } 
-                        image = { poke.image } 
+                        image = { poke.img } 
                         id = { poke.id } 
                         key = { poke.id } 
                     /> 
