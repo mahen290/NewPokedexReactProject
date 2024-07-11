@@ -9,7 +9,7 @@
         justify-content: space-around;
     }
 
-#pokemon-name-search 
+.pokemon-name-search 
     {
         width: 98%;
         height: 4rem;
@@ -19,10 +19,9 @@
         border: none;
         border-radius: 15px;
         font-size: 20px;
-        color: blue;
     }
 
-#pokemon-name-search:focus 
+.pokemon-name-search:focus 
     {
         outline: none;
     }

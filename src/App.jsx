@@ -7,7 +7,7 @@ function App() {
   return (
     <div className = "outer-pokedex">
       <h1> 
-        <Link className = "Pokedex-Heading" to = "/"> My Pokedex Project With Vite React </Link> 
+        <Link className = "pokedex-heading" to = "/"> My Pokedex Project With Vite React </Link> 
       </h1>
       <CustomRoutes />
     </div>
