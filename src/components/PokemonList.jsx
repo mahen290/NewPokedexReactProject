@@ -108,8 +108,11 @@ function PokemonList()
             { 
                 ( pokemonListState.isLoading ) ? 'Loading...' : 
                     pokemonListState.pokemonList.map( (poke) => 
-                    <Pokemon name = { poke.name } image = { poke.image } 
-                        id = { poke.id } key = { poke.id } 
+                    <Pokemon 
+                        name = { poke.name } 
+                        image = { poke.img } 
+                        id = { poke.id } 
+                        key = { poke.id } 
                     /> 
                 )
             }
