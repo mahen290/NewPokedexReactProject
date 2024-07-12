@@ -27,19 +27,19 @@ function PokemonList()
     {
         // setIsLoading(true);
 
-        setPokemonListState((state) => ({...state, isLoading: true}))
+        setPokemonListState( (state) => ( { ...state, isLoading: true } ) )
         const response = await axios.get(pokemonListState.pokedexUrl); 
         // This downloads list of 20 pokemon. 
-        console.log(response)
+        console.log( response )
 
         const pokemonResults = response.data.results; 
         // we get the array of pokemons from result
-        console.log(response.data);  
+        console.log( response.data );  
         console.log( pokemonResults );                                  
         // we get the array of pokemons from result
 
         // setNextUrl(response.data.next);
-        setPokemonListState( (state) => ( {
+        setPokemonListState( ( state ) => ( {
             ...state, 
             nextUrl: response.data.next, 
             previousUrl: response.data.previous
@@ -72,7 +72,7 @@ function PokemonList()
         console.log ( pokemonListResult );
         
         // setPokemonList(pokeListResult);
-        setPokemonListState((state) => ({...state, pokemonList:pokemonListResult, 
+        setPokemonListState((state) => ({...state, pokemonList: pokemonListResult, 
             isLoading: false
             })
         );
@@ -84,7 +84,17 @@ function PokemonList()
         downloadPokemons();
     }, [pokemonListState.pokedexUrl])
 
+    const [ searchQuery, setSearchQuery ] = useState('');
+        const handleSearch = ( query ) => { 
+            setSearchQuery ( query );
+        };
+
+  const filteredPokemon = response.filter( (pokemon) => 
+    pokemon.name.toLowerCase().includes( searchQuery.toLowerCase() ))
+
   return (
+<>
+    <Search onSearch = { handleSearch } />
     <div className = "main-wrapper"> 
         <div className = "pokemon-list-wrapper"> Pokemon Data List </div>
 
@@ -116,8 +126,22 @@ function PokemonList()
                     /> 
                 )
             }
+
+        {/* Search Every Pokemon Item By The Name */}
+
+            {
+                filteredPokemon.map( ( sear_poke ) => (
+                    <Pokemon 
+                        name = { sear_poke.name }
+                        image = { sear_poke.img }
+                        id = { sear_poke.id }
+                        key = { sear_poke.id }
+                    />
+                ) )
+            }
         </div>
     </div>
+</>
   );
 }
 
