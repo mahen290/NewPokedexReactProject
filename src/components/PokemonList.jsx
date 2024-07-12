@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./PokemonList.css";
 import axios from 'axios';
 import Pokemon from './Pokemon';
+import Search from './Search';
 
 function PokemonList() 
 {
@@ -30,12 +31,12 @@ function PokemonList()
         setPokemonListState( (state) => ( { ...state, isLoading: true } ) )
         const response = await axios.get(pokemonListState.pokedexUrl); 
         // This downloads list of 20 pokemon. 
-        console.log( response )
+        console.log(response)
 
         const pokemonResults = response.data.results; 
         // we get the array of pokemons from result
-        console.log( response.data );  
-        console.log( pokemonResults );                                  
+        console.log(response.data);  
+        console.log(pokemonResults);                                  
         // we get the array of pokemons from result
 
         // setNextUrl(response.data.next);
@@ -82,12 +83,12 @@ function PokemonList()
     useEffect( () => 
     {
         downloadPokemons();
-    }, [pokemonListState.pokedexUrl])
+    }, [ pokemonListState.pokedexUrl ] )
 
-    const [ searchQuery, setSearchQuery ] = useState('');
-        const handleSearch = ( query ) => { 
-            setSearchQuery ( query );
-        };
+const [ searchQuery, setSearchQuery ] = useState('');
+    const handleSearch = (query) => { 
+        setSearchQuery (query);
+    };
 
   const filteredPokemon = response.filter( (pokemon) => 
     pokemon.name.toLowerCase().includes( searchQuery.toLowerCase() ))

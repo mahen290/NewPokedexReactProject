@@ -1,9 +1,10 @@
-
+import React from 'react';
 import './Search.css';
 
-function Search( { onSearch } ) {
-
+function Search( { onSearch } ) 
+{
   const searchHandler = (event) => {
+    console.log(event);
     onSearch(event.target.value);
   }
   return (
