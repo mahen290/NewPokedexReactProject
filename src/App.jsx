@@ -10,7 +10,9 @@ function App() {
         <Link className = "Pokedex-Heading" to = "/"> My Pokedex Project With Vite React </Link> 
       </h1>
       <CustomRoutes />
+      gyuguiuiouiou
     </div>
+    
   );
 }
 
