@@ -14,7 +14,7 @@ function PokemonDetails() {
 
     async function downloadPokemon() {
     const response = await axios.get( `https://pokeapi.co/api/v2/pokemon/${id}` );
-    console.log(response.data);
+    console.log("pokemon detail", response.data);
 
       setPokemon({
         name: response.data.name,
